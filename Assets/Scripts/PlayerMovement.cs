@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Public allows us to see and edit inside of the Unity inspector
-    public float speed = 5; // Movement Speed
-    public int facingDirection = 1; // Sprite facing right
+    public float speed = 5; 
+    public int facingDirection = 1; 
 
 
     public Rigidbody2D rb;
@@ -30,10 +30,10 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("horizontal", Mathf.Abs(horizontal));
         anim.SetFloat("vertical", Mathf.Abs(vertical));
 
-        rb.velocity = new Vector2(horizontal, vertical) * speed;
+        rb.velocity = new Vector2(horizontal, vertical) * speed;  // Player movement speed
     }
 
-    // Change facing direction
+    // Change facing direction of sprite
     void Flip()
     {
         facingDirection *= -1;
